@@ -21,6 +21,15 @@ public struct ServicePayload: ServiceErrorProperties{
     public var error: Error?
     public var method: String
     
+    public init(response: HTTPURLResponse,
+                data: Data?,
+                error: Error?,
+                method: String){
+        self.response = response
+        self.data = data
+        self.error = error
+        self.method = method
+    }
 }
 
 
